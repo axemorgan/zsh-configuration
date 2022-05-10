@@ -16,9 +16,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ln -s $ZSH_CUSTOM/.zprofile $HOME/.zprofile
 ln -s $ZSH_CUSTOM/.zshrc $HOME/.zshrc
 ```
+5. Init any git submodules included in the plugins directory
+```shell
+git submodule init $ZSH_CUSTOM/plugins/<path to plugin directory>
+```
 
-Note: when adding custom plugins to `$ZSH_CUSTOM/plugins` that come from other git repositories, it's best to include them add a Git Submodule for ease of updating, and to keep it separate from this repo.
+### Git Submodules for Custom Plugins
+
+When adding custom plugins to `$ZSH_CUSTOM/plugins` that come from other git repositories, it's best to include them add a Git Submodule for ease of updating, and to keep it separate from this repo's history.
 ```shell
 git submodule add <path to repo.git> $ZSH_CUSTOM/plugins
-git submodule init
+git submodule init <path to plugin directory>
 ```
