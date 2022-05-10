@@ -18,6 +18,7 @@ adb
 brew
 docker
 gradle
+zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
