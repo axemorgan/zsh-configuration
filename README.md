@@ -19,6 +19,7 @@ ln -s $ZSH_CUSTOM/.zshrc $HOME/.zshrc
 5. Init any git submodules included in the plugins directory
 ```shell
 git submodule init $ZSH_CUSTOM/plugins/<path to plugin directory>
+git submodule update $ZSH_CUSTOM/plugins/<path to plugin directory>
 ```
 
 ### Git Submodules for Custom Plugins
